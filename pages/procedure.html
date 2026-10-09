@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Procédure d'admission — Le coeur de Melly</title>
+<meta name="description" content="Procédure d'admission à l'école Le coeur de Melly : les 4 étapes pour inscrire votre enfant.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+.steps{list-style:none;counter-reset:s;position:relative;max-width:800px;margin:0 auto}
+.steps::before{content:"";position:absolute;left:21px;top:10px;bottom:10px;width:2px;background:#e5c4d0}
+.steps li{counter-increment:s;position:relative;padding:0 0 34px 64px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--gold);display:grid;place-items:center;font-size:1.4rem;font-weight:700}
+.steps b{display:block;color:var(--ink);font-size:1.05rem;margin-bottom:4px}
+.steps span{font-size:.93rem;color:var(--muted);line-height:1.6}
+</style>
+</head>
+<body data-group="admissions">
+<div id="arcons-header"></div>
+
+<section class="page-hero">
+  <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1800&q=80&auto=format&fit=crop')"></div>
+  <div class="wrap">
+    <div class="breadcrumb"><a href="../index.html">Accueil</a><span class="sep">/</span><span>Admissions</span><span class="sep">/</span><span>Procédure</span></div>
+    <span class="eyebrow">Rejoindre l'école</span>
+    <h1>Procédure d'admission</h1>
+    <p>Un processus simple, accompagné par notre équipe à chaque étape.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <ol class="steps">
+      <li class="rv"><b>Prenez contact</b><span>Remplissez le formulaire en ligne ou appelez-nous pour fixer une visite de l'école.</span></li>
+      <li class="rv delay-1"><b>Visitez et rencontrez l'équipe</b><span>Découvrez les classes, rencontrez la direction et les enseignants. Un temps d'échange pour poser toutes vos questions.</span></li>
+      <li class="rv delay-2"><b>Déposez le dossier</b><span>Bulletins des deux dernières années, pièce d'identité de l'élève, certificat de scolarité précédent et formulaire d'inscription complété.</span></li>
+      <li class="rv delay-3"><b>Recevez la réponse</b><span>La décision vous est communiquée sous deux semaines. En cas d'admission, un dossier d'inscription définitive vous est transmis.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section style="background:var(--sky)">
+  <div class="wrap">
+    <div class="prose-block rv" style="max-width:800px;margin:0 auto 50px;text-align:center">
+      <span class="eyebrow">À savoir</span>
+      <h2>Informations utiles</h2>
+    </div>
+    <div class="grid-3">
+      <div class="info-card rv"><h3>Périodes d'inscription</h3><p>Les inscriptions sont ouvertes de janvier à septembre pour la rentrée suivante.</p></div>
+      <div class="info-card rv delay-1"><h3>Places limitées</h3><p>Nos classes à effectif réduit étant très demandées, nous conseillons de candidater tôt.</p></div>
+      <div class="info-card rv delay-2"><h3>Visite conseillée</h3><p>Nous recommandons fortement une visite avant de finaliser l'inscription.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Prêt à commencer ?</h2>
+    <p>Déposez votre demande d'inscription en ligne.</p>
+    <a href="inscription.html" class="btn">Inscription en ligne →</a>
+  </div>
+</section>
+
+<div id="arcons-footer"></div>
+<script src="../layout.js"></script>
+</body>
+</html>

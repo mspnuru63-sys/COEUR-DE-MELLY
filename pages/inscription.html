@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inscription en ligne — Le coeur de Melly</title>
+<meta name="description" content="Déposez votre demande d'inscription en ligne à l'école Le coeur de Melly.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body data-group="admissions">
+<div id="arcons-header"></div>
+
+<section class="page-hero">
+  <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1800&q=80&auto=format&fit=crop')"></div>
+  <div class="wrap">
+    <div class="breadcrumb"><a href="../index.html">Accueil</a><span class="sep">/</span><span>Admissions</span><span class="sep">/</span><span>Inscription en ligne</span></div>
+    <span class="eyebrow">Formulaire</span>
+    <h1>Inscription en ligne</h1>
+    <p>Déposez votre demande en quelques minutes. Nous vous répondrons sous 48 heures.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap" style="max-width:760px;margin:0 auto">
+    <form class="contact-form" id="fm" novalidate>
+      <h3 style="margin-bottom:6px">Informations sur l'élève</h3>
+      <div class="r">
+        <div><label>Prénom de l'élève</label><input required placeholder="Prénom"></div>
+        <div><label>Nom de l'élève</label><input required placeholder="Nom"></div>
+      </div>
+      <div class="r">
+        <div><label>Date de naissance</label><input required type="date"></div>
+        <div><label>Cycle souhaité</label>
+          <select required>
+            <option value="">Choisir…</option>
+            <option>Maternelle</option>
+            <option>Primaire</option>
+            <option>Collège</option>
+            <option>Lycée</option>
+          </select>
+        </div>
+      </div>
+      <div><label>Niveau précis (ex. CP, 5ème, 2nde…)</label><input placeholder="Niveau souhaité"></div>
+
+      <h3 style="margin-top:14px;margin-bottom:6px">Informations sur le parent ou tuteur</h3>
+      <div class="r">
+        <div><label>Nom complet</label><input required placeholder="Prénom et nom"></div>
+        <div><label>Téléphone</label><input required type="tel" placeholder="+242 …"></div>
+      </div>
+      <div><label>Courriel</label><input required type="email" placeholder="vous@exemple.com"></div>
+      <div><label>Adresse</label><input placeholder="Adresse postale"></div>
+
+      <h3 style="margin-top:14px;margin-bottom:6px">Message (facultatif)</h3>
+      <div><textarea rows="4" placeholder="Informations complémentaires, situation particulière, questions…"></textarea></div>
+
+      <button class="btn gold" type="submit" style="justify-content:center">Envoyer ma demande</button>
+      <p id="ok" style="display:none;color:var(--gold);font-weight:700;text-align:center;padding:12px;background:#fdeef4;border-radius:8px">✓ Merci, votre demande a bien été envoyée. Nous vous répondons sous 48 heures.</p>
+    </form>
+  </div>
+</section>
+
+<div id="arcons-footer"></div>
+<script src="../layout.js"></script>
+</body>
+</html>

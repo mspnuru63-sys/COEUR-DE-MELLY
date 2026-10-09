@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nous contacter — Le coeur de Melly</title>
+<meta name="description" content="Contactez l'école privée Le coeur de Melly : coordonnées, horaires et formulaire de contact.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body data-group="contact">
+<div id="arcons-header"></div>
+
+<section class="page-hero">
+  <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1800&q=80&auto=format&fit=crop')"></div>
+  <div class="wrap">
+    <div class="breadcrumb"><a href="../index.html">Accueil</a><span class="sep">/</span><span>Contact</span><span class="sep">/</span><span>Nous contacter</span></div>
+    <span class="eyebrow">Contact</span>
+    <h1>Parlons de votre enfant</h1>
+    <p>Notre équipe vous répond sous 48 heures pour toute question ou demande d'inscription.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap contact-grid">
+    <div class="contact-info rv">
+      <div class="item">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><b>Adresse</b><span>12 avenue de l'Éducation, Brazzaville</span></div>
+      </div>
+      <div class="item">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div><b>Téléphone</b><span>+242 00 000 0000</span></div>
+      </div>
+      <div class="item">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div><b>Courriel</b><span>contact@lecoeurdemelly.edu</span></div>
+      </div>
+      <div class="item">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div><b>Horaires</b><span>Lundi au vendredi · 7h30 – 16h30</span></div>
+      </div>
+    </div>
+    <form class="contact-form rv delay-1" id="fm" novalidate>
+      <div class="r">
+        <div><label>Nom complet</label><input required placeholder="Votre nom" autocomplete="name"></div>
+        <div><label>Téléphone</label><input required type="tel" placeholder="+242 …" autocomplete="tel"></div>
+      </div>
+      <div><label>Courriel</label><input required type="email" placeholder="vous@exemple.com" autocomplete="email"></div>
+      <div><label>Sujet</label>
+        <select>
+          <option>Demande d'information</option>
+          <option>Inscription</option>
+          <option>Visite de l'école</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div><label>Message</label><textarea rows="5" placeholder="Votre message"></textarea></div>
+      <button class="btn gold" type="submit" style="justify-content:center">Envoyer ma demande</button>
+      <p id="ok" style="display:none;color:var(--gold);font-weight:700;text-align:center;padding:12px;background:#fdeef4;border-radius:8px">✓ Merci, votre message a bien été envoyé.</p>
+    </form>
+  </div>
+</section>
+
+<div id="arcons-footer"></div>
+<script src="../layout.js"></script>
+</body>
+</html>

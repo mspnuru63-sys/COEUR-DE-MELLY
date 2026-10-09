@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Galerie photos — Le coeur de Melly</title>
+<meta name="description" content="Découvrez la vie de l'école Le coeur de Melly en images.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:14px;margin-top:50px}
+.gal .img{border-radius:12px;overflow:hidden;transition:.5s;filter:saturate(.95)}
+.gal .img:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gal .img:nth-child(5){grid-column:span 2}
+.gal .img:hover{filter:saturate(1.15) brightness(1.05);transform:scale(1.02)}
+@media(max-width:960px){.gal{grid-template-columns:1fr 1fr;grid-auto-rows:180px}.gal .img:nth-child(n){grid-column:span 1;grid-row:span 1}}
+@media(max-width:560px){.gal{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-group="actus">
+<div id="arcons-header"></div>
+
+<section class="page-hero">
+  <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1800&q=80&auto=format&fit=crop')"></div>
+  <div class="wrap">
+    <div class="breadcrumb"><a href="../index.html">Accueil</a><span class="sep">/</span><span>Actualités</span><span class="sep">/</span><span>Galerie photos</span></div>
+    <span class="eyebrow">Album</span>
+    <h1>Galerie photos</h1>
+    <p>Un aperçu de la vie de l'école, des salles de classe aux moments partagés.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="gal" id="gal"></div>
+  </div>
+</section>
+
+<div id="arcons-footer"></div>
+<script src="../layout.js"></script>
+<script>
+const photos = [
+  "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=900&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1571210862729-78a52d3779a2?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=600&q=80&auto=format&fit=crop"
+];
+document.getElementById('gal').innerHTML = photos.map(p => `<div class="img" style="background-image:url('${p}')"></div>`).join('');
+</script>
+</body>
+</html>
