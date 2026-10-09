@@ -241,34 +241,59 @@
 
   /* =====================================================================
      EFFET MACHINE À ÉCRIRE SUR LES TITRES
+     Version corrigée : réserve la hauteur réelle du titre pour empêcher
+     tout décalage des éléments environnants pendant la frappe.
      ===================================================================== */
   function typeEffect(el, speed, delay) {
     if (!el || el.dataset.typed === 'true') return;
     el.dataset.typed = 'true';
+
     const originalHTML = el.innerHTML;
     const text = el.textContent.trim();
     if (!text) return;
-    el.textContent = '';
-    el.classList.add('type', 'typing');
+
+    // 1) Clone invisible qui réserve la hauteur finale du titre
+    const phantom = document.createElement('span');
+    phantom.innerHTML = originalHTML;
+    phantom.style.cssText = 'visibility:hidden;display:block;height:auto;pointer-events:none';
+    phantom.setAttribute('aria-hidden', 'true');
+
+    // 2) Prépare le conteneur
+    el.innerHTML = '';
+    el.style.position = 'relative';
+    el.style.display = 'block';
+
+    // 3) Conteneur du texte tapé, superposé au phantom
+    const typed = document.createElement('span');
+    typed.className = 'type typing';
+    typed.style.cssText = 'display:block;position:absolute;top:0;left:0;right:0';
+
+    el.appendChild(phantom);
+    el.appendChild(typed);
+
     let i = 0;
     setTimeout(() => {
       const interval = setInterval(() => {
         if (i < text.length) {
-          el.textContent += text.charAt(i);
+          typed.textContent += text.charAt(i);
           i++;
         } else {
           clearInterval(interval);
-          el.classList.remove('typing');
-          el.classList.add('done');
+          typed.classList.remove('typing');
+          typed.classList.add('done');
+          // 4) Restaure proprement le HTML original
           setTimeout(() => {
             el.innerHTML = originalHTML;
             el.classList.remove('type', 'done');
+            el.style.position = '';
+            el.style.display = '';
           }, 400);
         }
       }, speed);
     }, delay);
   }
 
+  // Applique l'effet à tous les titres h1 de la page-hero
   document.querySelectorAll('.page-hero h1').forEach((h1, i) => {
     typeEffect(h1, 45, 300 + i * 200);
   });
